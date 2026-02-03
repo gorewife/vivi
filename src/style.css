@@ -1,6 +1,6 @@
 :root {
-  --bg: #c0c0c0;
-  --window: #e0e0e0;
+  --bg: #f0e6f8 ;
+  --window: #cdb0e2;
   --pink: #ff77c6;
   --cyan: #00ffff;
   --purple: #bf7fff;
@@ -41,7 +41,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-bottom: 2px solid #888;
+  border-bottom: 4px solid #8087f0;
   box-shadow: inset 1px 1px 0 #fff, inset -1px -1px 0 #888;
 }
 
@@ -113,7 +113,7 @@ a:hover {
   width: 280px;
   padding: 1rem;
   background: var(--window);
-  border: 2px solid #888;
+  border: 6px solid #8087f0;
   border-radius: 0;
   text-align: center;
   font-size: 16px;
@@ -124,9 +124,72 @@ a:hover {
 .cosplay-card img {
   max-width: 100%;
   margin-bottom: 0.5rem;
-  border: 1px solid #888;
+  border: 1px solid #8087f0;
 }
 
+/* ==========
+   WIN98 WINDOW CHROME
+   =========== */
+
+.win-window {
+  width: fit-content;
+  margin: 2rem auto;
+  background: var(--window);
+  border: 4px solid #8087f0;
+  box-shadow:
+    inset 1px 1px 0 #fff,
+    inset -1px -1px 0 #888,
+    4px 4px 0 #000;
+}
+
+/* title bar */
+.win-titlebar {
+  height: 26px;
+  background: linear-gradient(
+    to right,
+    #000080,
+    #8087f0
+  );
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6px;
+  border-bottom: 2px solid #000;
+}
+
+/* title text */
+.win-title {
+  font-size: 14px;
+  color: #fff;
+  letter-spacing: 1px;
+  user-select: none;
+}
+
+/* fake window buttons */
+.win-controls {
+  display: flex;
+  gap: 4px;
+}
+
+.win-controls span {
+  width: 14px;
+  height: 14px;
+  background: #c0c0c0;
+  border: 1px solid #000;
+  box-shadow:
+    inset 1px 1px 0 #fff,
+    inset -1px -1px 0 #555;
+}
+
+/* content area */
+.win-content {
+  padding: 1rem;
+}
+
+/* tighten cosplay card when inside window */
+.win-content .cosplay-card {
+  margin: 0;
+}
 
 /* ==== SOCIAL LINKS ==== */
 .social-links {
